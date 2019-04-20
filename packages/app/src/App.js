@@ -1,10 +1,20 @@
 import React, { Component } from "react";
+import firebase from "firebase";
 
 import Titles from "./components/Titles";
 import Form from "./components/Form";
 import Weather from "./components/Weather";
 
-const API_KEY = "ca35b23530021d4b508171f1a5f0ba0a";
+var config = {
+  apiKey: "AIzaSyDu9JxKH_EldezNOuQkDtrvJKOraymGSos",
+  authDomain: "weather-8128e.firebaseapp.com",
+  databaseURL: "https://weather-8128e.firebaseio.com",
+  projectId: "weather-8128e",
+  storageBucket: "weather-8128e.appspot.com",
+  messagingSenderId: "685611493772"
+};
+
+firebase.initializeApp(config);
 
 class App extends Component {
   state = {};
@@ -34,14 +44,12 @@ class App extends Component {
   _getWeather = async e => {
     e.preventDefault();
 
+    const getWeather = firebase.functions().httpsCallable("getWeather");
+
     const city = e.target.elements.city.value;
     const country = e.target.elements.country.value;
 
-    const apiCall = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
-    );
-
-    const data = await apiCall.json();
+    const data = await getWeather({ city, country });
 
     console.info("data: ", data);
 
