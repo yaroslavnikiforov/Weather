@@ -1,0 +1,38 @@
+form {
+  input[type="text"] {
+    width: 30%;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 4px;
+    color: #fff !important;
+    font-size: 20px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 1px #f16051;
+    outline: none;
+  }
+
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #2c3e50 inset;
+    -webkit-text-fill-color: #fff !important;
+  }
+
+  button {
+    margin: 0 2px;
+    padding: 8px 20px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 100;
+    letter-spacing: 1px;
+    background-color: #f16051;
+    border: 0;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:active {
+      outline: none;
+    }
+  }
+}

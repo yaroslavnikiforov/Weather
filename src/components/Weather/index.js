@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./styles.scss";
 
 const Weather = ({ conditions }) => {
   const {
@@ -12,7 +13,7 @@ const Weather = ({ conditions }) => {
   } = conditions;
 
   return (
-    <div className="weather__info">
+    <div className="weather">
       {city && country && (
         <p className="weather__key">
           Location:{" "}
@@ -21,6 +22,7 @@ const Weather = ({ conditions }) => {
           </span>
         </p>
       )}
+
       {temperature && (
         <p className="weather__key">
           Temperature:{" "}
@@ -29,16 +31,19 @@ const Weather = ({ conditions }) => {
           </span>
         </p>
       )}
+
       {humidity && (
         <p className="weather__key">
           Humidity: <span className="weather__value">{humidity + " %"}</span>
         </p>
       )}
+
       {description && (
         <p className="weather__key">
           Conditions: <span className="weather__value">{description}</span>
         </p>
       )}
+
       {error && <p className="weather__error">{error}</p>}
     </div>
   );

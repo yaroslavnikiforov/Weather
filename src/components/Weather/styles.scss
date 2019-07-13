@@ -1,0 +1,29 @@
+.weather {
+  width: 60%;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 2px;
+
+  &__key {
+    padding: 20px 0 20px 0;
+    color: #f16051;
+    font-weight: 400;
+    border-bottom: solid 2px rgba(255, 255, 255, 0.06);
+
+    &:last-child {
+      border: 0;
+    }
+  }
+
+  &__value {
+    color: #fff;
+    font-weight: 200;
+  }
+
+  &__error {
+    color: #f16051;
+    font-size: 20px;
+    font-weight: 200;
+    letter-spacing: 1px;
+  }
+}
