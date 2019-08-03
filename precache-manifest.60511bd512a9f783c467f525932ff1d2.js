@@ -20,16 +20,16 @@ self.__precacheManifest = [
     "url": "/weather/static/js/2.39599b33.chunk.js"
   },
   {
-    "revision": "f4769f9bdb7466be65088239c12046d1",
-    "url": "/weather/static/media/glyphicons-halflings-regular.f4769f9b.eot"
+    "revision": "fa2772327f55d8198301fdb8bcfc8158",
+    "url": "/weather/static/media/glyphicons-halflings-regular.fa277232.woff"
   },
   {
     "revision": "44ef794e3674cde3d5cc",
     "url": "/weather/static/js/main.3d967221.chunk.js"
   },
   {
-    "revision": "fa2772327f55d8198301fdb8bcfc8158",
-    "url": "/weather/static/media/glyphicons-halflings-regular.fa277232.woff"
+    "revision": "f4769f9bdb7466be65088239c12046d1",
+    "url": "/weather/static/media/glyphicons-halflings-regular.f4769f9b.eot"
   },
   {
     "revision": "e18bbf611f2a2e43afc071aa2f4e1512",
